@@ -1,0 +1,26 @@
+{
+  "name": "brave-search-cli",
+  "version": "0.2.1",
+  "description": "CLI tool for performing web searches using Brave Search API",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "bsearch": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cli",
+    "search",
+    "brave"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^12.0.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
