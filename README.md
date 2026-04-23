@@ -1,3 +1,5 @@
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/steimerbyte)
+
 # bsearch - Brave Search CLI
 
 CLI for Brave Search API with **LLM Context** (pre-extracted content for AI/RAG) and **Web Search** modes.
