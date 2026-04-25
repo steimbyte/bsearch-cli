@@ -1,0 +1,4 @@
+node_modules/
+.bsearch-env
+*.env
+.env*
