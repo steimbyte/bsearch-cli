@@ -157,7 +157,8 @@ async function performLlmContext(query, options, apiKey, force = false) {
   const headers = {
     'X-Subscription-Token': apiKey,
     'Accept': 'application/json',
-    'Accept-Encoding': 'gzip, deflate'
+    'Accept-Encoding': 'gzip, deflate',
+    'cache-control': 'no-cache'
   };
 
   // Add location headers if provided
