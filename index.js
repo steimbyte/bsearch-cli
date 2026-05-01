@@ -1,6 +1,19 @@
 #!/usr/bin/env node
 
 import { Command } from 'commander';
+import { readFileSync } from 'fs';
+import { join } from 'path';
+import { homedir } from 'os';
+
+function getApiKey() {
+  try {
+    const envFile = join(homedir(), '.bsearch-env');
+    const content = readFileSync(envFile, 'utf8');
+    const match = content.match(/^BRAVE_API_KEY=(.+)$/m);
+    if (match) return match[1];
+  } catch (e) {}
+  return process.env.BRAVE_API_KEY;
+}
 
 const program = new Command();
 
@@ -114,9 +127,9 @@ function sleep(ms) {
 }
 
 async function performSearch(query, options) {
-  const apiKey = process.env.BRAVE_API_KEY;
+  const apiKey = getApiKey();
   if (!apiKey) {
-    throw new Error('BRAVE_API_KEY not set');
+    throw new Error('BRAVE_API_KEY not set ( ~/.bsearch-env)');
   }
 
   // Determine search mode: CLI flag > ENV var > default (llm)
