@@ -1,8 +1,7 @@
 {
-  "name": "brave-search-cli",
+  "name": "@steimbyte/bsearch-cli",
   "version": "0.2.2",
   "description": "CLI tool for performing web searches using Brave Search API",
-  "type": "module",
   "main": "index.js",
   "bin": {
     "bsearch": "./index.js"
@@ -22,5 +21,8 @@
   },
   "engines": {
     "node": ">=20.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }
