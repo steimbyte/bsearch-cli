@@ -122,7 +122,7 @@ const program = new Command();
 program
   .name('bsearch')
   .description('Web search using Brave Search API - LLM Context & Web Search')
-  .version('1.0.0')
+  .version('0.3.0')
   .argument('<query>', 'search query')
   .option('-c, --count <n>', 'Number of search results to consider (1-50)', '20')
   .option('-f, --freshness <period>', 'Freshness filter (pd/pw/pm/py or YYYY-MM-DDtoYYYY-MM-DD)')

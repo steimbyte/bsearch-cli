@@ -3,6 +3,7 @@
   "version": "0.3.0",
   "description": "CLI tool for performing web searches using Brave Search API",
   "main": "index.js",
+  "type": "module",
   "bin": {
     "bsearch": "./index.js"
   },
